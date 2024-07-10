@@ -1,0 +1,55 @@
+# Definiranje klase Osoba
+class Osoba:
+    def __init__(self, ime, godine):
+        self.ime = ime
+        self.godine = godine
+
+    def predstavi_se(self):
+        return f'Ja sam {self.ime} i imam {self.godine} godina.'
+
+# Definiranje klase Student koja nasljeđuje osobine klase Osoba
+class Student(Osoba):
+    def __init__(self, ime, godine, fakultet):
+        super().__init__(ime, godine)
+        self.fakultet = fakultet
+
+    def predstavi_se(self):
+        return f'Ja sam student {self.ime}, imam {self.godine} godina i studiram na fakultetu {self.fakultet}.'
+
+# Definiranje klase Zaposlenik koja nasljeđuje osobine klase Osoba
+class Zaposlenik(Osoba):
+    def __init__(self, ime, godine, pozicija):
+        super().__init__(ime, godine)
+        self.pozicija = pozicija
+
+    def predstavi_se(self):
+        return f'Ja sam zaposlenik {self.ime}, imam {self.godine} godina i radim kao {self.pozicija}.'
+
+# Kreiranje instanci objekata
+osoba1 = Osoba('Ana', 30)
+student1 = Student('Marko', 25, 'Fakultet informatike')
+zaposlenik1 = Zaposlenik('Ivan', 35, 'Programer')
+
+# Ispisivanje informacija o svakom objektu
+print(osoba1.predstavi_se())
+print(student1.predstavi_se())
+print(zaposlenik1.predstavi_se())
+
+# Dodatno: Inicijalizacija Git repozitorija i postavljanje na GitHub
+import os
+import subprocess
+
+# Inicijalizacija Git repozitorija
+subprocess.run(['git', 'init'])
+
+# Dodavanje svih datoteka
+subprocess.run(['git', 'add', '.'])
+
+# Commit promjena
+subprocess.run(['git', 'commit', '-m', 'Dodane klase Osoba, Student i Zaposlenik'])
+
+# Postavljanje udaljenog repozitorija na GitHub (promijenite URL na svoj repozitorij)
+git_remote_add = subprocess.run(['git', 'remote', 'add', 'origin', 'https://github.com/vas-nalog/vas-repozitorij.git'])
+
+# Push na GitHub
+git_push = subproce
