@@ -1,3 +1,4 @@
+
 # Definiranje klase Osoba
 class Osoba:
     def __init__(self, ime, godine):
@@ -34,22 +35,3 @@ zaposlenik1 = Zaposlenik('Ivan', 35, 'Programer')
 print(osoba1.predstavi_se())
 print(student1.predstavi_se())
 print(zaposlenik1.predstavi_se())
-
-# Dodatno: Inicijalizacija Git repozitorija i postavljanje na GitHub
-import os
-import subprocess
-
-# Inicijalizacija Git repozitorija
-subprocess.run(['git', 'init'])
-
-# Dodavanje svih datoteka
-subprocess.run(['git', 'add', '.'])
-
-# Commit promjena
-subprocess.run(['git', 'commit', '-m', 'Dodane klase Osoba, Student i Zaposlenik'])
-
-# Postavljanje udaljenog repozitorija na GitHub (promijenite URL na svoj repozitorij)
-git_remote_add = subprocess.run(['git', 'remote', 'add', 'origin', 'https://github.com/vas-nalog/vas-repozitorij.git'])
-
-# Push na GitHub
-git_push = subproce
